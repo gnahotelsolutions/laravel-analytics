@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Analytics;
+namespace GNAHotelSolutions\Analytics;
 
 use Illuminate\Support\Carbon;
 

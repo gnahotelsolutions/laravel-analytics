@@ -1,8 +1,8 @@
 <?php
 
 use Carbon\Carbon;
-use Spatie\Analytics\Exceptions\InvalidPeriod;
-use Spatie\Analytics\Period;
+use GNAHotelSolutions\Analytics\Exceptions\InvalidPeriod;
+use GNAHotelSolutions\Analytics\Period;
 
 it('can create a period for a given amount of days', function () {
     $expectedDate = Carbon::create(2016, 1, 1);

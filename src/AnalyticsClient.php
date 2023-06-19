@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Analytics;
+namespace GNAHotelSolutions\Analytics;
 
 use Google\Analytics\Data\V1beta\BetaAnalyticsDataClient;
 use Google\Analytics\Data\V1beta\Dimension;

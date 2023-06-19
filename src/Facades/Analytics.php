@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Analytics\Facades;
+namespace GNAHotelSolutions\Analytics\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @mixin \Spatie\Analytics\Analytics
+ * @mixin \GNAHotelSolutions\Analytics\Analytics
  */
 class Analytics extends Facade
 {

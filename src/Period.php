@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Analytics;
+namespace GNAHotelSolutions\Analytics;
 
 use Carbon\Carbon;
 use DateTimeInterface;
 use Google\Analytics\Data\V1beta\DateRange;
-use Spatie\Analytics\Exceptions\InvalidPeriod;
+use GNAHotelSolutions\Analytics\Exceptions\InvalidPeriod;
 
 class Period
 {

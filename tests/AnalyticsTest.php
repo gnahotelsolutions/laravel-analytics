@@ -2,10 +2,10 @@
 
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
-use Spatie\Analytics\Analytics;
-use Spatie\Analytics\AnalyticsClient;
-use Spatie\Analytics\OrderBy;
-use Spatie\Analytics\Period;
+use GNAHotelSolutions\Analytics\Analytics;
+use GNAHotelSolutions\Analytics\AnalyticsClient;
+use GNAHotelSolutions\Analytics\OrderBy;
+use GNAHotelSolutions\Analytics\Period;
 
 beforeEach(function () {
     $this->analyticsClient = Mockery::mock(AnalyticsClient::class);

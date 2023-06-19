@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Analytics;
+namespace GNAHotelSolutions\Analytics;
 
-use Spatie\Analytics\Exceptions\InvalidConfiguration;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use GNAHotelSolutions\Analytics\Exceptions\InvalidConfiguration;
+use GNAHotelSolutions\LaravelPackageTools\Package;
+use GNAHotelSolutions\LaravelPackageTools\PackageServiceProvider;
 
 class AnalyticsServiceProvider extends PackageServiceProvider
 {

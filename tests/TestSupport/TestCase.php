@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Analytics\Tests\TestSupport;
+namespace GNAHotelSolutions\Analytics\Tests\TestSupport;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\Analytics\AnalyticsServiceProvider;
+use GNAHotelSolutions\Analytics\AnalyticsServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

@@ -2,14 +2,13 @@
     "name": "gnahotelsolutions/laravel-analytics",
     "description": "A Laravel package to retrieve Google Analytics data.",
     "keywords": [
-        "spatie",
         "google",
         "analytics",
         "retrieve",
         "reports",
         "laravel"
     ],
-    "homepage": "https://github.com/spatie/laravel-analytics",
+    "homepage": "https://github.com/gnahotelsolutions/laravel-analytics",
     "license": "MIT",
     "authors": [
         {
@@ -22,10 +21,10 @@
     "require": {
         "php": "^7.3",
         "brick/math": "^0.9.3",
+        "gnahotelsolutions/laravel-package-tools": "dev-main",
         "google/analytics-data": "^0.9.4",
         "laravel/framework": "^8.12",
         "nesbot/carbon": "^2.66",
-        "gnahotelsolutions/laravel-package-tools": "dev-legacy",
         "symfony/cache": "^5.0"
     },
     "require-dev": {
@@ -37,22 +36,22 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Analytics\\": "src"
+            "GNAHotelSolutions\\Analytics\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Analytics\\AnalyticsServiceProvider"
+                "GNAHotelSolutions\\Analytics\\AnalyticsServiceProvider"
             ],
             "aliases": {
-                "Analytics": "Spatie\\Analytics\\Facades\\Analytics"
+                "Analytics": "GNAHotelSolutions\\Analytics\\Facades\\Analytics"
             }
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Analytics\\Tests\\": "tests"
+            "GNAHotelSolutions\\Analytics\\Tests\\": "tests"
         }
     },
     "config": {
@@ -68,8 +67,8 @@
     "prefer-stable": true,
     "repositories": [
         {
-            "type": "path",
-            "url": "../laravel-package-tools"
+            "type": "vcs",
+            "url": "https://github.com/gnahotelsolutions/laravel-package-tools"
         }
     ]
 }

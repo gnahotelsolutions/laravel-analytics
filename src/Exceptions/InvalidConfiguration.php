@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Analytics\Exceptions;
+namespace GNAHotelSolutions\Analytics\Exceptions;
 
 use Exception;
 

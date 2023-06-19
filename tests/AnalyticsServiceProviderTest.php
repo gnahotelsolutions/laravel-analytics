@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Storage;
-use Spatie\Analytics\Exceptions\InvalidConfiguration;
-use Spatie\Analytics\Facades\Analytics;
-use Spatie\Analytics\Period;
+use GNAHotelSolutions\Analytics\Exceptions\InvalidConfiguration;
+use GNAHotelSolutions\Analytics\Facades\Analytics;
+use GNAHotelSolutions\Analytics\Period;
 
 it('will throw an exception if the property id is not set', function () {
     config()->set('analytics.property_id', '');
