@@ -8,11 +8,20 @@ class TypeCaster
 {
     public function castValue(string $key, string $value): mixed
     {
-        return match ($key) {
-            'date' => Carbon::createFromFormat('Ymd', $value),
-            'visitors', 'pageViews', 'activeUsers', 'newUsers', 'screenPageViews',
-            'active1DayUsers', 'active7DayUsers', 'active28DayUsers' => (int) $value,
-            default => $value,
-        };
+        switch ($key) {
+            case 'date':
+                return Carbon::createFromFormat('Ymd', $value);
+            case 'visitors':
+            case 'pageViews':
+            case 'activeUsers':
+            case 'newUsers':
+            case 'screenPageViews':
+            case 'active1DayUsers':
+            case 'active7DayUsers':
+            case 'active28DayUsers':
+                return (int) $value;
+            default:
+                return $value;
+        }
     }
 }

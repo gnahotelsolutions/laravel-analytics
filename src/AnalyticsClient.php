@@ -12,12 +12,16 @@ use Illuminate\Support\Collection;
 
 class AnalyticsClient
 {
-    protected int $cacheLifeTimeInMinutes = 0;
+    protected $cacheLifeTimeInMinutes = 0;
+    protected $service;
+    protected $cache;
 
     public function __construct(
-        protected BetaAnalyticsDataClient $service,
-        protected Repository $cache,
+        BetaAnalyticsDataClient $service,
+        Repository $cache
     ) {
+        $this->cache = $cache;
+        $this->service = $service;
     }
 
     public function setCacheLifeTimeInMinutes(int $cacheLifeTimeInMinutes): self
@@ -35,7 +39,7 @@ class AnalyticsClient
         int $maxResults = 10,
         array $orderBy = [],
         int $offset = 0,
-        FilterExpression $dimensionFilter = null,
+        FilterExpression $dimensionFilter = null
     ): Collection {
         $typeCaster = resolve(TypeCaster::class);
 
@@ -84,7 +88,9 @@ class AnalyticsClient
         return $this->cache->remember(
             $cacheName,
             $this->cacheLifeTimeInMinutes,
-            fn () => $this->service->runReport($request),
+            function () use ($request) {
+                return $this->service->runReport($request);
+            },
         );
     }
 
@@ -103,14 +109,18 @@ class AnalyticsClient
     protected function getFormattedMetrics(array $metrics): array
     {
         return collect($metrics)
-            ->map(fn ($metric) => new Metric(['name' => $metric]))
+            ->map(function ($metric) {
+                return new Metric(['name' => $metric]);
+            })
             ->toArray();
     }
 
     protected function getFormattedDimensions(array $dimensions): array
     {
         return collect($dimensions)
-            ->map(fn ($dimension) => new Dimension(['name' => $dimension]))
+            ->map(function ($dimension) {
+                return new Dimension(['name' => $dimension]);
+            })
             ->toArray();
     }
 }
