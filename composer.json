@@ -21,7 +21,7 @@
     "require": {
         "php": "^7.3|^8.0|^8.1",
         "brick/math": "^0.9.3",
-        "gnahotelsolutions/laravel-package-tools": "^1.0",
+        "gnahotelsolutions/laravel-package-tools": "^1.1",
         "google/analytics-data": "^0.9.4",
         "laravel/framework": "^8.12",
         "nesbot/carbon": "^2.66",
