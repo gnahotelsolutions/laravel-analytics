@@ -6,7 +6,7 @@ use Illuminate\Support\Carbon;
 
 class TypeCaster
 {
-    public function castValue(string $key, string $value): mixed
+    public function castValue(string $key, string $value)
     {
         switch ($key) {
             case 'date':
